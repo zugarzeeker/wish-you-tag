@@ -30,7 +30,7 @@ function handleChange(event) {
   renderText();
 }
 
-textInput.value = "ขอ ให้ มาเล่น กัน เยอะๆ นะครับ . . .";
+textInput.value = "แ อ พ ส ร้ า ง ข้ อ ค ว า ม ป้ า ย";
 resultText = generateTag(textInput.value);
 renderText();
 
