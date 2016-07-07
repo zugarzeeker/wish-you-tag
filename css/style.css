@@ -32,3 +32,11 @@ input[type="text"] {
   color: #333;
   font-size: 1.2em;
 }
+
+#copy-btn {
+  margin-top: 15px;
+}
+
+#noti {
+  color: white;
+}

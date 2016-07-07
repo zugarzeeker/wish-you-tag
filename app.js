@@ -19,6 +19,7 @@ function renderText() {
 }
 
 function handleChange(event) {
+  $("#noti").text("");
   resultText = generateTag(textInput.value);
   renderText();
 }
@@ -34,10 +35,12 @@ clipboard.on('success', function(e) {
   console.info('Action:', e.action);
   console.info('Text:', e.text);
   console.info('Trigger:', e.trigger);
+  $("#noti").text("คัดลอกแล้ว!");
   e.clearSelection();
 });
 
 clipboard.on('error', function(e) {
   console.error('Action:', e.action);
   console.error('Trigger:', e.trigger);
+  $("#noti").text("เกิดข้อผิดพลาด...");
 });
