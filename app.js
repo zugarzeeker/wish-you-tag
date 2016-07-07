@@ -4,7 +4,7 @@ var resultText = "";
 
 function getCredit() {
   var cr = ['', ''];
-  cr.push('https://zugarzeeker.github.io/wish-you-tag/')
+  cr.push('สร้างได้ที่: https://zugarzeeker.github.io/wish-you-tag/')
   return cr.join('\n');
 }
 
