@@ -1,5 +1,9 @@
 body, html {
-  background-color: #556270;
+  background-color: #FC9D9A;
+}
+
+
+.container-fluid {
 }
 
 .col-centered{
@@ -17,8 +21,12 @@ input[type="text"] {
 }
 
 #text-tag {
+  margin-top: 30px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 20px;
   display: inline-block;
   text-align: left;
-  color: white;
+  color: #333;
   font-size: 1.2em;
 }
