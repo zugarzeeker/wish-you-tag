@@ -52,3 +52,12 @@ input[type="text"] {
   margin-top: .3em;
   color: #eee;
 }
+
+.footer {
+  font-size: .8em;
+  color: rgb(52, 56, 129);
+}
+
+.footer a {
+  color: rgba(255, 255, 255, 0.92)
+}
