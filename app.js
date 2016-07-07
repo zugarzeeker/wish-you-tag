@@ -2,11 +2,19 @@ var textTag = document.getElementById('text-tag');
 var textInput = document.getElementById('textInput');
 
 function generateTag(text) {
-  return text;
+  var t = text.split(' ');
+  var s = [];
+  s.push('┏┷ ┓');
+  for (var i = 0, len = t.length; i < len; i++) {
+    s.push('┃ ??? ┃'.replace('???', t[i]));
+  }
+  s.push('┗━ ┛');
+  console.log(s);
+  return s.join('<br>');
 }
 
 function renderText(text) {
-  textTag.innerHTML = generateTag(text);
+  textTag.innerHTML = text;
 }
 
 function handleChange(event) {
