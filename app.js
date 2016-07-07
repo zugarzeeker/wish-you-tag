@@ -20,3 +20,6 @@ function renderText(text) {
 function handleChange(event) {
   renderText(generateTag(textInput.value));
 }
+
+textInput.value = "ขอ ให้ มาเล่น กัน เยอะๆ นะครับ . . .";
+renderText(generateTag(textInput.value));
