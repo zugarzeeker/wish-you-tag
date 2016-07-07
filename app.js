@@ -1,5 +1,6 @@
 var textTag = document.getElementById('text-tag');
 var textInput = document.getElementById('textInput');
+var resultText = "";
 
 function generateTag(text) {
   var t = text.split(' ');
@@ -13,13 +14,15 @@ function generateTag(text) {
   return s.join('<br>');
 }
 
-function renderText(text) {
-  textTag.innerHTML = text;
+function renderText() {
+  textTag.innerHTML = resultText;
 }
 
 function handleChange(event) {
-  renderText(generateTag(textInput.value));
+  resultText = generateTag(textInput.value);
+  renderText();
 }
 
 textInput.value = "ขอ ให้ มาเล่น กัน เยอะๆ นะครับ . . .";
-renderText(generateTag(textInput.value));
+resultText = generateTag(textInput.value);
+renderText();
