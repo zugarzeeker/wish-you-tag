@@ -2,6 +2,12 @@ var textTag = document.getElementById('text-tag');
 var textInput = document.getElementById('textInput');
 var resultText = "";
 
+function getCredit() {
+  var cr = ['', ''];
+  cr.push('https://zugarzeeker.github.io/wish-you-tag/')
+  return cr.join('\n');
+}
+
 function generateTag(text) {
   var t = text.split(' ');
   var s = [];
@@ -29,11 +35,16 @@ resultText = generateTag(textInput.value);
 renderText();
 
 
-var clipboard = new Clipboard('.btn');
+var clipboard = new Clipboard('.btn', {
+  text: function(trigger) {
+    window.rt = resultText;
+    return resultText.split('<br>').join('\n')  + getCredit();
+  }
+});
 
 clipboard.on('success', function(e) {
   console.info('Action:', e.action);
-  console.info('Text:', e.text);
+  console.info('Text:', e.text + getCredit());
   console.info('Trigger:', e.trigger);
   $("#noti").text("✔ คัดลอกแล้ว!");
   // $("#copy-btn").text("✔ คัดลอกแล้ว!")
